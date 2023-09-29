@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <link rel="stylesheet" href="reset.css" />
+   <link rel="stylesheet" href="ch05-proj3.css" />
+</head>
+
+<body>
+<header>
+     <h1>Share Your Travels</h1>
+     <p>let us know where you've been</p>
+            <script>
+               function clearFormFields() {
+                   document.getElementById("form").reset();
+               }
+            </script>
+</header>
+<main>
+   <section>
+      <form id="form" action="https://www.randyconnolly.com/tests/process.php" method="POST">
+         <fieldset>
+            <legend>Photo Details</legend>
+            <div class ="title">
+               <label for="title">Title</label><br>
+               <input type="text" name="Title" placeholder="Give your photo a descriptive name" >
+            </div> 
+            <div class="Description">
+               <label for="title">Description</label><br>
+               <textarea id="Description" name="Description" rows ="6" cols="224" placeholder="Adding a rich description will help with search results"></textarea>
+            </div>  
+            
+            <div class="MiddlePage">
+
+               <div class="LeftMiddleDiv">
+                  <label for="title">Continent</label><br>
+                  <select name="Continent" id ="Continent">
+                     <option value="None"></option>
+                     <option value="North America">North America</option>
+                     <option value="South America">South America</option>
+                     <option value="Europe">Europe</option>
+                     <option value="Africa">Africa</option>
+                     <option value="Asia">Asia</option>
+                     <option value="Australia">Australia</option>
+                     <option value="Antartica">Antartica</option>
+                  </select>
+
+                  <br>
+                  <label for="title">Country</label><br>
+                  <select name="Country" id ="Country">
+                     <option value="None"></option>
+                     <option value="United States">United States </option>
+                     <option value="Canada">Canada </option>
+                     <option value="Brazil">Brazil </option>
+                     <option value="Mexico">Mexico </option>
+                     <option value="Australia">Australia </option>
+                     <option value="Spain">Spain </option>
+                  </select>
+
+                  <br>
+                  <label for="title">City</label><br>
+                  <input id="city" name="City" type="text">
+               </div>
+               
+               <div class="RightMiddleDiv">
+
+                  <div class="CopyRight">
+                     <label for="Copyright">Copyright?</label><br>
+                     <input type="Radio" id="Radio1" value="1" name="copyright">
+                     <label for="All Right">All rights reserved</label>
+                     <br>
+                     <input type="Radio" id="Radio2" value="2" name="copyright">
+                     <label for="All Right">Creative Commons</label>
+                  </div>
+                     
+                  <div class="CreativeCommons">
+                     <label for="CreateCommons">Creative Commons Types</label><br>
+                     <input type="checkbox" name="cc[]" value="1">
+                     <label for="">Attribution</label>
+                     <br>
+                     <input type="checkbox" name="cc[]" value="2">
+                     <label for="">Noncommercial</label>
+                     <br>
+                     <input type="checkbox" name="cc[]" value="3">
+                     <label for="">No NoDerivative Works</label>
+                     <br>
+                     
+                  </div>
+               </div>
+
+            </div>
+
+            <div class="AcceptLicenseDiv">
+               <label>I accept the software license</label>
+               <input type="Checkbox" value="on" name ="Accept">
+            </div>
+
+            <div class="BottomPage">
+
+               <div class="LeftBottomDiv">
+                  <label>Rate this photo</label>
+                  <br>
+                  <input type="Number" id="RatePhoto" value="RatePhoto" name="Rate" >
+                  <br>
+                  <label>Color Collection:</label>
+                  <br>
+                  <input type="Color" id="ColorCollection" value="ColorCollection" name="color">
+                  <br>
+               </div>
+
+               <div class="RightBottomDiv">
+
+                  <div class="DateAndTime">
+                     <label>Date Taken</label>
+                     <br>
+                     <input type="date" id="DateTaken" value="DateTaken" name="date" >
+                     <br>
+                     <label>Time Taken</label>
+                     <br>
+                     <input type="time" id="TimeTaken" value="TimeTaken" name="time">
+                     <br>
+                  </div>
+               </div>
+            </div>
+
+            <div class="SubmitAndClear">
+               <input type="submit">
+               <button type="button" onclick="clearFormFields()">Clear Form</button>
+            </div>
+         </fieldset>
+      </form>       
+   </section>
+</main>  
+
+
+</body>
+</html>
